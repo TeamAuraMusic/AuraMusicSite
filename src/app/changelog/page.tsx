@@ -4,9 +4,27 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v1.0.10",
+    build: "Build 11",
+    date: "Latest",
+    changes: [
+      "Video Switching Loading Indicator — smooth loading animation while video is being fetched, prevents black screen flash when switching between audio/video modes",
+      "Improved Video Lyrics Sync — reduced polling interval from 150ms to 50ms, lyrics perfectly synchronized with video playback",
+      "Music Video Search Algorithm Overhaul — completely rewritten with normalized title comparison, artist token matching, multi-query search, expanded exclusion list for non-official videos, early exit for high-confidence matches",
+      "Updater now automatically follows redirects for GitHub API requests",
+      "All repository URLs updated across entire codebase",
+      "Fixed black screen flash when switching between audio/video modes",
+      "Fixed lyrics offset not being properly applied in video mode",
+      "Fixed video background during loading state",
+      "Fixed repository URL references throughout the app",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v1.0.9...v1.0.10",
+  },
+  {
     version: "v1.0.9",
     build: "Build 10",
-    date: "Latest",
+    date: "",
     changes: [
       "Complete Video Player Overhaul — YouTube-inspired design with smooth animations",
       "Brightness/Volume Swipe Gestures — swipe left for brightness, right for volume with progress indicator",

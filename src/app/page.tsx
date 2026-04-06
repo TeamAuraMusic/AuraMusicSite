@@ -224,7 +224,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400">
                 <Star className="w-4 h-4 text-orange-500" />
-                v1.0.9 — Complete Video Player Overhaul 🎬
+                v1.0.10 — Video Search Algorithm Overhaul 🔍
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
