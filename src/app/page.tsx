@@ -12,7 +12,6 @@ import {
   Heart,
   Shield,
   ChevronRight,
-  Star,
   Volume2,
   Timer,
   Video,
@@ -222,9 +221,9 @@ export default function Home() {
 
           <div className="max-w-5xl mx-auto px-4 text-center">
             <ScrollReveal>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400">
-                <Star className="w-4 h-4 text-orange-500" />
-                v1.0.10 — Video Search Algorithm Overhaul 🔍
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
+                <span className="w-4 h-4 rounded-full bg-white/20 flex items-center justify-center text-[10px] font-bold">N</span>
+                v1.0.12 — Hero Carousel Redesign
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>

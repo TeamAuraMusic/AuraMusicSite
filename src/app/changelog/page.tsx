@@ -4,9 +4,45 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v1.0.12",
+    build: "Build 13",
+    date: "Latest",
+    changes: [
+      "Hero Carousel Redesign — title and artist now displayed below thumbnail, full-cover carousel thumbnails with shimmer placeholder during loading, increased carousel heights",
+      "Added Trending Now section with carousel on Home Screen, thumbnail cropping for small screens, responsive design for tablets",
+      "Improved PayPal icon/logo across the app",
+      "Removed video fill mode for cleaner interface",
+      "Animated About screen icon with build type display",
+      "Fixed video autoplay timing issues",
+      "Improved video lyrics sync timing",
+      "Fixed Explore screen not displaying mixes, podcasts, or albums",
+      "Fixed duplicate Music Videos for You sections in HomeViewModel",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v1.0.11...v1.0.12",
+  },
+  {
+    version: "v1.0.11",
+    build: "Build 12",
+    date: "",
+    changes: [
+      "Added support for podcasts and episodic content across the application",
+      "Introduced Top 100 Charts with extended categories and sections",
+      "Improved video mode — automatic activation for video-enabled songs with simplified UI",
+      "Enhanced About screen with application icon integration, tablet layout support, improved animations",
+      "Improved UI across Explore screen, Search, and Top Charts sections",
+      "Fixed compilation errors affecting Explore screen, YouTube integration, podcast features",
+      "Fixed PayPal donation link to open in external browser",
+      "Fixed video mode syntax, drawable resources, exhaustive when expressions, deprecated API usage",
+      "Added GitHub Actions workflow for automated builds",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v1.0.10...v1.0.11",
+  },
+  {
     version: "v1.0.10",
     build: "Build 11",
-    date: "Latest",
+    date: "",
     changes: [
       "Video Switching Loading Indicator — smooth loading animation while video is being fetched, prevents black screen flash when switching between audio/video modes",
       "Improved Video Lyrics Sync — reduced polling interval from 150ms to 50ms, lyrics perfectly synchronized with video playback",
