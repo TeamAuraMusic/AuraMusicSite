@@ -4,9 +4,23 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v1.0.13",
+    build: "Build 14",
+    date: "Latest",
+    changes: [
+      "Native Video Subtitles — implemented ExoPlayer native subtitle rendering, auto-fetches YouTube captions when switching to video mode, CC button to toggle subtitles on/off",
+      "F-Droid Compatibility — removed Google ML Kit dependency (LanguageDetectionHelper), added Fastlane metadata for F-Droid submission",
+      "Liquid Glass Effect Improvements — fixed dark mode with pure black theme, proper toggle UI in appearance settings",
+      "Video Playback Improvements — video songs now start at 0:00, regular songs preserve position when switching to video, parallel fetching of captions and stream URL for faster loading",
+      "Fixed numerous build errors and compilation issues, missing imports, MediaLibrarySessionCallback constants, subtitle track selection, caption fetching reliability, video autoplay and thumbnail layout issues",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v1.0.12...v1.0.13",
+  },
+  {
     version: "v1.0.12",
     build: "Build 13",
-    date: "Latest",
+    date: "",
     changes: [
       "Hero Carousel Redesign — title and artist now displayed below thumbnail, full-cover carousel thumbnails with shimmer placeholder during loading, increased carousel heights",
       "Added Trending Now section with carousel on Home Screen, thumbnail cropping for small screens, responsive design for tablets",

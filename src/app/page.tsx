@@ -57,7 +57,7 @@ const features = [
     icon: Video,
     title: "Video Mode",
     description:
-      "Watch official music videos with swipe gestures for brightness/volume, smart search, and selectable quality (360p–1080p). Now auto-fetches videos for regular songs.",
+      "Watch official music videos with swipe gestures for brightness/volume, smart search, selectable quality (360p–1080p), and native subtitles with CC toggle. Auto-fetches videos for video songs.",
   },
   {
     icon: Headphones,
@@ -223,7 +223,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-4 h-4 rounded-full bg-white/20 flex items-center justify-center text-[10px] font-bold">N</span>
-                v1.0.12 — Hero Carousel Redesign
+                v1.0.13 — Native Video Subtitles
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
