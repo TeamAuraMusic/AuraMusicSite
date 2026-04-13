@@ -4,9 +4,35 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v1.0.14",
+    build: "Build 15",
+    date: "Latest",
+    changes: [
+      "New real-time audio visualizer with wave animations",
+      "Improved Listen Together experience and navigation placement",
+      "More reliable subtitles and caption handling with language preference support",
+      "Lyrics timing fixes and synchronization improvements",
+      "Enhanced video playback controls and layout",
+      "AudioVisualizerView using Android Visualizer API for live wave rendering",
+      "AudioVisualizerSlider rewritten with ocean wave style replacing traditional progress bar",
+      "Liquid (Samsung-inspired) notification bar wave slider",
+      "Listen Together now configurable at top of navigation bar",
+      "Listen Together card added to Home screen",
+      "Added subtitle language preference in player settings",
+      "Captions enabled by default in video mode using VideoLyricsOverlay",
+      "Improved caption fetching with proper request headers and MOBILE/ANDROID client fallback",
+      "Fixed malformed timestamps in RushLyrics with proper line timing generation",
+      "Fixed invalid timestamp handling and lyrics highlighting issues",
+      "Added Fixed width (FIXED_WIDTH) video scaling option",
+      "Fixed compilation issues, duplicate declarations, and animation easing issues",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v1.0.13...v1.0.14",
+  },
+  {
     version: "v1.0.13",
     build: "Build 14",
-    date: "Latest",
+    date: "",
     changes: [
       "Native Video Subtitles — implemented ExoPlayer native subtitle rendering, auto-fetches YouTube captions when switching to video mode, CC button to toggle subtitles on/off",
       "F-Droid Compatibility — removed Google ML Kit dependency (LanguageDetectionHelper), added Fastlane metadata for F-Droid submission",

@@ -15,6 +15,7 @@ import {
   Volume2,
   Timer,
   Video,
+  Waveform,
 } from "lucide-react";
 import Image from "next/image";
 import MobileMenu from "@/components/MobileMenu";
@@ -47,6 +48,12 @@ const screenshots = [
 ];
 
 const features = [
+  {
+    icon: Waveform,
+    title: "Real-time Audio Visualizer",
+    description:
+      "Experience immersive wave animations using Android Visualizer API. Ocean wave-style progress bar and Liquid notification slider for stunning visuals.",
+  },
   {
     icon: Music,
     title: "YouTube Music Integration",
@@ -223,7 +230,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-4 h-4 rounded-full bg-white/20 flex items-center justify-center text-[10px] font-bold">N</span>
-                v1.0.13 — Native Video Subtitles
+                                v1.0.14 — Audio Visualizer
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
