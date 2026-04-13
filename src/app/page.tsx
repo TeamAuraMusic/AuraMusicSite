@@ -15,7 +15,7 @@ import {
   Volume2,
   Timer,
   Video,
-  Waveform,
+  Activity,
 } from "lucide-react";
 import Image from "next/image";
 import MobileMenu from "@/components/MobileMenu";
@@ -49,7 +49,7 @@ const screenshots = [
 
 const features = [
   {
-    icon: Waveform,
+    icon: Activity,
     title: "Real-time Audio Visualizer",
     description:
       "Experience immersive wave animations using Android Visualizer API. Ocean wave-style progress bar and Liquid notification slider for stunning visuals.",
