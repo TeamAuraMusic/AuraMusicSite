@@ -344,12 +344,12 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-3">
               {features.map((f, i) => (
                 <ScrollReveal key={f.title} delay={i * 20}>
-                  <div className="group p-3 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-orange-300 dark:hover:border-orange-500/50 transition-all hover:shadow-md h-full">
-                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500/10 to-pink-500/10 flex items-center justify-center mb-2 group-hover:from-orange-500/20 group-hover:to-pink-500/20 transition-colors">
-                      <f.icon className="w-3.5 h-3.5 text-orange-500" />
+                  <div className="group p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-orange-300 dark:hover:border-orange-500/50 transition-all hover:shadow-md h-full">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/10 to-pink-500/10 flex items-center justify-center mb-2 group-hover:from-orange-500/20 group-hover:to-pink-500/20 transition-colors">
+                      <f.icon className="w-4 h-4 text-orange-500" />
                     </div>
-                    <h3 className="text-xs font-semibold mb-1">{f.title}</h3>
-                    <p className="text-[10px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <h3 className="text-sm font-semibold mb-1">{f.title}</h3>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
                       {f.description}
                     </p>
                   </div>
