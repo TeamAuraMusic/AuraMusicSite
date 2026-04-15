@@ -229,28 +229,28 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* ─── Hero ─── */}
-        <section className="relative overflow-hidden py-24 sm:py-36">
+        <section className="relative overflow-hidden py-16 sm:py-24">
           {/* Background glow */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-full blur-3xl" />
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-full blur-3xl" />
           </div>
 
           <div className="max-w-5xl mx-auto px-4 text-center">
             <ScrollReveal>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
-                <span className="w-4 h-4 rounded-full bg-white/20 flex items-center justify-center text-[10px] font-bold">N</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
+                <span className="w-3 h-3 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-bold">N</span>
                                 v1.0.15 — Lyrics Provider Fixes
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tighter leading-[1.1] mb-6">
+              <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tighter leading-[1.1] mb-4">
                 Your Ultimate{" "}
                 <span className="gradient-text">YouTube Music</span>{" "}
                 Client for Android
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <p className="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+              <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto mb-6 leading-relaxed">
                 AuraMusic is a modern, open-source Android music player with YouTube Music
                 integration, powerful audio features, live synced lyrics, and a beautiful
                 Material 3 interface.
@@ -260,28 +260,28 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href={DOWNLOAD_URL}
-                  className="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
                 >
-                  <Download className="w-5 h-5" />
+                  <Download className="w-4 h-4" />
                   Download APK
                 </a>
                 <a
                   href={GITHUB_REPO}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all"
                 >
-                  <GithubIcon className="w-5 h-5" />
-                  View on GitHub
+                  <GithubIcon className="w-4 h-4" />
+                  GitHub
                 </a>
                 <a
                   href={TELEGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all"
                 >
-                  <TelegramIcon className="w-5 h-5" />
-                  Join Telegram
+                  <TelegramIcon className="w-4 h-4" />
+                  Telegram
                 </a>
               </div>
             </ScrollReveal>
@@ -297,29 +297,29 @@ export default function Home() {
         </section>
 
         {/* ─── Screenshots Carousel ─── */}
-        <section id="screenshots" className="py-20 sm:py-28 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 mb-12 text-center">
+        <section id="screenshots" className="py-10 sm:py-14 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 mb-8 text-center">
             <ScrollReveal>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
                 See It in Action
               </h2>
-              <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
                 A sleek dark interface that makes album art pop. Every screen is crafted with Material 3.
               </p>
             </ScrollReveal>
           </div>
           <div className="relative">
-            <div className="flex animate-scroll-left w-max gap-6 px-4">
+            <div className="flex animate-scroll-left w-max gap-4 px-4">
               {[...screenshots, ...screenshots].map((s, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[220px] sm:w-[260px] rounded-2xl overflow-hidden shadow-xl border border-zinc-200 dark:border-zinc-800"
+                  className="flex-shrink-0 w-[160px] sm:w-[200px] rounded-xl overflow-hidden shadow-lg border border-zinc-200 dark:border-zinc-800"
                 >
                   <Image
                     src={s.src}
                     alt={s.alt}
-                    width={260}
-                    height={560}
+                    width={200}
+                    height={430}
                     className="w-full h-auto"
                   />
                 </div>
@@ -329,27 +329,27 @@ export default function Home() {
         </section>
 
         {/* ─── Features Grid ─── */}
-        <section id="features" className="py-20 sm:py-28 bg-white dark:bg-zinc-900/50">
+        <section id="features" className="py-12 sm:py-16 bg-white dark:bg-zinc-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
                   Packed with Features
                 </h2>
-                <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-                  Everything you need for the best music experience on Android, and more.
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-xl mx-auto">
+                  Everything you need for the best music experience on Android.
                 </p>
               </div>
             </ScrollReveal>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {features.map((f, i) => (
-                <ScrollReveal key={f.title} delay={i * 50}>
-                  <div className="group p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-orange-300 dark:hover:border-orange-500/50 transition-all hover:shadow-lg h-full">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500/10 to-pink-500/10 flex items-center justify-center mb-4 group-hover:from-orange-500/20 group-hover:to-pink-500/20 transition-colors">
-                      <f.icon className="w-5 h-5 text-orange-500" />
+                <ScrollReveal key={f.title} delay={i * 30}>
+                  <div className="group p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-orange-300 dark:hover:border-orange-500/50 transition-all hover:shadow-md h-full">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500/10 to-pink-500/10 flex items-center justify-center mb-3 group-hover:from-orange-500/20 group-hover:to-pink-500/20 transition-colors">
+                      <f.icon className="w-4 h-4 text-orange-500" />
                     </div>
-                    <h3 className="text-lg font-semibold mb-2">{f.title}</h3>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <h3 className="text-sm font-semibold mb-1">{f.title}</h3>
+                    <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
                       {f.description}
                     </p>
                   </div>
@@ -360,24 +360,24 @@ export default function Home() {
         </section>
 
         {/* ─── Tech Stack ─── */}
-        <section id="tech" className="py-20 sm:py-28">
+        <section id="tech" className="py-12 sm:py-16">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
                   Built with Modern Tech
                 </h2>
-                <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-xl mx-auto">
                   AuraMusic leverages the best Android development tools and libraries.
                 </p>
               </div>
             </ScrollReveal>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {techStack.map((t, i) => (
-                <ScrollReveal key={t.name} delay={i * 75}>
-                  <div className="text-center p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-md transition-shadow">
+                <ScrollReveal key={t.name} delay={i * 50}>
+                  <div className="text-center p-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-md transition-shadow">
                     <p className="font-semibold text-sm">{t.name}</p>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">
+                    <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-0.5">
                       {t.description}
                     </p>
                   </div>
@@ -388,36 +388,35 @@ export default function Home() {
         </section>
 
         {/* ─── Open Source Banner ─── */}
-        <section className="py-16 bg-gradient-to-r from-orange-500/5 to-pink-500/5 border-y border-zinc-200/50 dark:border-zinc-800/50">
+        <section className="py-10 bg-gradient-to-r from-orange-500/5 to-pink-500/5 border-y border-zinc-200/50 dark:border-zinc-800/50">
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+            <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center gap-6">
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-3">
-                  <Shield className="w-5 h-5 text-orange-500" />
-                  <span className="text-sm font-semibold text-orange-600 dark:text-orange-400">
+                <div className="flex items-center gap-2 mb-2">
+                  <Shield className="w-4 h-4 text-orange-500" />
+                  <span className="text-xs font-semibold text-orange-600 dark:text-orange-400">
                     100% Open Source
                   </span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold mb-3">
+                <h3 className="text-lg sm:text-2xl font-bold mb-2">
                   Transparent & Community Driven
                 </h3>
-                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3">
                   AuraMusic is licensed under GPL-3.0. The entire source code is available
-                  on GitHub. No tracking, no ads, no hidden agendas. Contribute, report
-                  issues, or fork it — it&#39;s your music player.
+                  on GitHub. No tracking, no ads, no hidden agendas.
                 </p>
                 <a
                   href={GITHUB_REPO}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-orange-600 dark:text-orange-400 hover:underline"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-orange-600 dark:text-orange-400 hover:underline"
                 >
-                  Explore on GitHub <ChevronRight className="w-4 h-4" />
+                  Explore on GitHub <ChevronRight className="w-3 h-3" />
                 </a>
               </div>
               <div className="flex-shrink-0">
-                <div className="w-32 h-32 rounded-3xl bg-gradient-to-br from-orange-500 to-pink-500 flex items-center justify-center shadow-xl">
-                  <GithubIcon className="w-16 h-16 text-white" />
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-pink-500 flex items-center justify-center shadow-lg">
+                  <GithubIcon className="w-10 h-10 text-white" />
                 </div>
               </div>
             </div>
@@ -425,13 +424,15 @@ export default function Home() {
         </section>
 
         {/* ─── FAQ ─── */}
-        <section id="faq" className="py-20 sm:py-28">
+        <section id="faq" className="py-12 sm:py-16">
           <div className="max-w-3xl mx-auto px-4">
             <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
                   Frequently Asked Questions
                 </h2>
+              </div>
+            </ScrollReveal>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
@@ -441,28 +442,28 @@ export default function Home() {
         </section>
 
         {/* ─── Download CTA ─── */}
-        <section className="py-20 sm:py-28 bg-gradient-to-br from-orange-500 to-pink-500 text-white">
+        <section className="py-12 sm:py-16 bg-gradient-to-br from-orange-500 to-pink-500 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-3">
               Ready to Transform Your Listening?
             </h2>
-            <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
+            <p className="text-sm text-white/80 mb-6 max-w-xl mx-auto">
               Download AuraMusic now and experience YouTube Music the way it was meant
               to be — beautiful, powerful, and free.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href={DOWNLOAD_URL}
-                className="inline-flex items-center gap-2 px-10 py-4 text-lg font-bold rounded-full bg-white text-zinc-900 shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold rounded-full bg-white text-zinc-900 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
               >
-                <Download className="w-5 h-5" />
+                <Download className="w-4 h-4" />
                 Download APK
               </a>
               <a
                 href={RELEASES_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold rounded-full border-2 border-white/30 text-white hover:bg-white/10 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-full border-2 border-white/30 text-white hover:bg-white/10 transition-all"
               >
                 All Releases
               </a>
@@ -472,7 +473,7 @@ export default function Home() {
       </main>
 
       {/* ─── Footer ─── */}
-      <footer className="py-12 border-t border-zinc-200/50 dark:border-zinc-800/50">
+      <footer className="py-8 border-t border-zinc-200/50 dark:border-zinc-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
@@ -538,8 +539,8 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <p className="text-sm text-zinc-500 dark:text-zinc-500 flex items-center gap-1">
-              Made with <Heart className="w-3.5 h-3.5 text-pink-500" /> by{" "}
+            <p className="text-xs text-zinc-500 dark:text-zinc-500 flex items-center gap-1">
+              Made with <Heart className="w-3 h-3 text-pink-500" /> by{" "}
               <a
                 href="https://github.com/chila254"
                 target="_blank"
@@ -550,7 +551,7 @@ export default function Home() {
               </a>
             </p>
           </div>
-          <p className="mt-6 text-center text-xs text-zinc-400 dark:text-zinc-600">
+          <p className="mt-4 text-center text-xs text-zinc-400 dark:text-zinc-600">
             &copy; {new Date().getFullYear()} AuraMusic Project. Not affiliated with
             YouTube or Google LLC. GPL-3.0 License.
           </p>
