@@ -531,15 +531,6 @@ export default function Home() {
               >
                 Donate
               </a>
-              <a
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors flex items-center gap-1"
-              >
-                <TelegramIcon className="w-4 h-4" />
-                Telegram
-              </a>
             </div>
             <p className="text-sm text-zinc-500 dark:text-zinc-500 flex items-center gap-1">
               Made with <Heart className="w-3.5 h-3.5 text-pink-500" /> by{" "}
