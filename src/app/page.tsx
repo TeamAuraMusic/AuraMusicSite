@@ -485,52 +485,58 @@ export default function Home() {
               />
               <span className="font-bold gradient-text">AuraMusic</span>
             </div>
-            <div className="flex items-center gap-6 text-sm text-zinc-500 dark:text-zinc-400">
-              <a
-                href={GITHUB_REPO}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-              >
-                GitHub
-              </a>
-              <a
-                href={RELEASES_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-              >
-                Releases
-              </a>
-              <a
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors flex items-center gap-1"
-              >
-                <TelegramIcon className="w-4 h-4" />
-                Telegram
-              </a>
-              <a
-                href="/changelog"
-                className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-              >
-                Changelog
-              </a>
-              <a
-                href="/privacy"
-                className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-              >
-                Privacy
-              </a>
-              <a
-                href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=franklinfinyange%40gmail.com&currency_code=USD&item_name=Support+Aura+Music"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-              >
-                Donate
-              </a>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="flex gap-8">
+                <a
+                  href={GITHUB_REPO}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={RELEASES_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                >
+                  Releases
+                </a>
+              </div>
+              <div className="flex gap-8">
+                <a
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors flex items-center gap-1"
+                >
+                  <TelegramIcon className="w-4 h-4" />
+                  Telegram
+                </a>
+                <a
+                  href="/changelog"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                >
+                  Changelog
+                </a>
+              </div>
+              <div className="flex gap-8">
+                <a
+                  href="/privacy"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                >
+                  Privacy
+                </a>
+                <a
+                  href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=franklinfinyange%40gmail.com&currency_code=USD&item_name=Support+Aura+Music"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                >
+                  Donate
+                </a>
+              </div>
             </div>
             <p className="text-sm text-zinc-500 dark:text-zinc-500 flex items-center gap-1">
               Made with <Heart className="w-3.5 h-3.5 text-pink-500" /> by{" "}
