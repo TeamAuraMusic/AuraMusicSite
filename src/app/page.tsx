@@ -433,8 +433,6 @@ export default function Home() {
                 </h2>
               </div>
             </ScrollReveal>
-              </div>
-            </ScrollReveal>
             <ScrollReveal delay={100}>
               <FaqAccordion faqs={faqs} />
             </ScrollReveal>
