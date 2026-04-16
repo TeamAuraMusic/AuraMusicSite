@@ -4,6 +4,27 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.0.0",
+    build: "Build 17",
+    date: "Latest",
+    changes: [
+      "Major release with significant UI/UX improvements and bug fixes",
+      "Added liquid glass customization options with blur radius, corner radius, and opacity controls",
+      "Added Discord and Telegram links to About screen",
+      "Improved shuffle button with 4-dot animation",
+      "Fixed video fit mode persistence and loading speed",
+      "Fixed lyrics provider preference to always respect user selection",
+      "Database migrations fixed for seamless upgrades",
+      "Track loaded song ID and stop loading when mediaMetadata matches",
+      "Fixed Rush lyrics sync by converting duration ms to seconds",
+      "Added auto-play on first frame in video mode",
+      "Removed unnecessary video toast message after successful load",
+      "Updated tinypinyin version to 2.0.1",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v1.0.15...2.0.0",
+  },
+  {
     version: "v1.0.14",
     build: "Build 15",
     date: "Latest",
