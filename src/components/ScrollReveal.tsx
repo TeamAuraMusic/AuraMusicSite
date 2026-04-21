@@ -15,6 +15,12 @@ export default function ScrollReveal({ children, delay = 0 }: ScrollRevealProps)
     const el = ref.current;
     if (!el) return;
 
+    // If IntersectionObserver is not supported, show content immediately
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
