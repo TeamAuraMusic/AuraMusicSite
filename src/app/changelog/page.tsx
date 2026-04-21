@@ -4,9 +4,30 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.1.0",
+    build: "Build 18",
+    date: "Latest",
+    changes: [
+      "Major release with voice command improvements, Google Cast support, and widget redesigns",
+      "Added hands-free 'Hey Aura' wake word detection using VOSK offline speech recognition",
+      "Added voice commands with interactive overlay and text-to-speech feedback",
+      "Added Google Cast support for GMS variant",
+      "Redesigned widgets with modern UI and full-cover album art",
+      "Improved voice command accuracy and wake word sensitivity",
+      "Fixed ANR issues and memory leaks in VOSK service",
+      "Added Google Cast device discovery and selection",
+      "Redesigned compact square, compact wide, and music player widgets",
+      "Added sleep timer and lyrics buttons to queue bar",
+      "Fixed ForegroundServiceDidNotStartInTimeException on Android 14+",
+      "Fixed TTS volume muting after voice commands",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/2.0.0...v2.1.0",
+  },
+  {
     version: "v2.0.0",
     build: "Build 17",
-    date: "Latest",
+    date: "",
     changes: [
       "Major release with significant UI/UX improvements and bug fixes",
       "Added liquid glass customization options with blur radius, corner radius, and opacity controls",
@@ -27,7 +48,7 @@ const releases = [
   {
     version: "v1.0.14",
     build: "Build 15",
-    date: "Latest",
+    date: "",
     changes: [
       "New real-time audio visualizer with wave animations",
       "Improved Listen Together experience and navigation placement",

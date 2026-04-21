@@ -11,7 +11,7 @@ const navLinks = [
   { href: "#faq", label: "FAQ" },
 ];
 
-export default function MobileMenu({ downloadUrl }: { downloadUrl: string }) {
+export default function MobileMenu({ onDownloadClick }: { onDownloadClick: () => void }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -68,14 +68,16 @@ export default function MobileMenu({ downloadUrl }: { downloadUrl: string }) {
         </nav>
 
         <div className="p-4">
-          <a
-            href={downloadUrl}
-            onClick={() => setOpen(false)}
-            className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-semibold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
-          >
-            <Download className="w-4 h-4" />
-            Download APK
-          </a>
+<button
+             onClick={() => {
+               setOpen(false);
+               onDownloadClick();
+             }}
+             className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-semibold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+           >
+             <Download className="w-4 h-4" />
+             Download APK
+           </button>
         </div>
       </div>
     </>

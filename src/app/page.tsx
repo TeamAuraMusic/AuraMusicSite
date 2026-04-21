@@ -16,7 +16,8 @@ import {
   Timer,
   Video,
   Activity,
-} from "lucide-react";
+  X,
+  } from "lucide-react";
 import Image from "next/image";
 import MobileMenu from "@/components/MobileMenu";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -24,6 +25,7 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
 import GitHubStats from "@/components/GitHubStats";
+import { useState } from "react";
 
 function GithubIcon({ className }: { className?: string }) {
   return (
@@ -34,11 +36,16 @@ function GithubIcon({ className }: { className?: string }) {
 }
 
 const GITHUB_REPO = "https://github.com/TeamAuraMusic/AuraMusic";
-const DOWNLOAD_URL =
-  "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic.apk";
 const RELEASES_URL = "https://github.com/TeamAuraMusic/AuraMusic/releases";
 const TELEGRAM_URL = "https://t.me/AuraMusicUpdates";
 const DISCORD_URL = "https://discord.gg/RAMPZy49K";
+
+const DOWNLOAD_URLS = {
+  standard:
+    "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic.apk",
+  cast:
+    "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic-with-Google-Cast.apk",
+};
 
 function TelegramIcon({ className }: { className?: string }) {
   return (
@@ -190,7 +197,105 @@ const faqs = [
   },
 ];
 
+function DownloadModal({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
+  const [variant, setVariant] = useState<"standard" | "cast">("standard");
+
+  if (!isOpen) return null;
+
+  const handleDownload = () => {
+    window.location.href = DOWNLOAD_URLS[variant];
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      {/* Modal */}
+      <div className="relative bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 p-6 max-w-md w-full mx-4">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-1 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+        >
+          <X className="w-5 h-5" />
+        </button>
+        <h3 className="text-xl font-bold mb-4">Choose Your Build</h3>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
+          Select which version of AuraMusic you want to install:
+        </p>
+        <div className="space-y-3 mb-6">
+          <label
+            className={`flex items-start gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all ${
+              variant === "standard"
+                ? "border-orange-500 bg-orange-50 dark:bg-orange-500/10"
+                : "border-zinc-200 dark:border-zinc-700 hover:border-zinc-300"
+            }`}
+          >
+            <input
+              type="radio"
+              name="variant"
+              value="standard"
+              checked={variant === "standard"}
+              onChange={(e) => setVariant(e.target.value as "standard")}
+              className="mt-1"
+            />
+            <div>
+              <p className="font-semibold">Standard</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                No Google Cast support. Works on all Android devices (8.0+).
+              </p>
+            </div>
+          </label>
+          <label
+            className={`flex items-start gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all ${
+              variant === "cast"
+                ? "border-orange-500 bg-orange-50 dark:bg-orange-500/10"
+                : "border-zinc-200 dark:border-zinc-700 hover:border-zinc-300"
+            }`}
+          >
+            <input
+              type="radio"
+              name="variant"
+              value="cast"
+              checked={variant === "cast"}
+              onChange={(e) => setVariant(e.target.value as "cast")}
+              className="mt-1"
+            />
+            <div>
+              <p className="font-semibold">With Google Cast</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                Includes Google Cast support. Requires Google Mobile Services
+                (GMS).
+              </p>
+            </div>
+          </label>
+        </div>
+        <button
+          onClick={handleDownload}
+          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
+        >
+          <Download className="w-4 h-4" />
+          Download
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+
+  const openDownloadModal = () => setShowDownloadModal(true);
+  const closeDownloadModal = () => setShowDownloadModal(false);
+
   return (
     <div className="flex flex-col min-h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50">
       {/* ─── Navigation ─── */}
@@ -224,14 +329,14 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-2">
             <DarkModeToggle />
-            <a
-              href={DOWNLOAD_URL}
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
-            >
-              <Download className="w-4 h-4" />
-              Download
-            </a>
-            <MobileMenu downloadUrl={DOWNLOAD_URL} />
+<button
+                  onClick={openDownloadModal}
+                  className="hidden sm:inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+                >
+                  <Download className="w-4 h-4" />
+                  Download
+                </button>
+            <MobileMenu onDownloadClick={openDownloadModal} />
           </div>
         </div>
       </header>
@@ -248,7 +353,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-3 h-3 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-bold">N</span>
-                                v2.0.0 — Major Update
+                                v2.1.0 — Voice Commands & Cast Support
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
@@ -267,13 +372,13 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={300}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href={DOWNLOAD_URL}
+                <button
+                  onClick={openDownloadModal}
                   className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
                 >
                   <Download className="w-4 h-4" />
                   Download APK
-                </a>
+                </button>
                 <a
                   href={GITHUB_REPO}
                   target="_blank"
@@ -468,13 +573,13 @@ export default function Home() {
               to be — beautiful, powerful, and free.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a
-                href={DOWNLOAD_URL}
+              <button
+                onClick={openDownloadModal}
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold rounded-full bg-white text-zinc-900 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
               >
                 <Download className="w-4 h-4" />
                 Download APK
-              </a>
+              </button>
               <a
                 href={RELEASES_URL}
                 target="_blank"
@@ -584,6 +689,9 @@ export default function Home() {
       </footer>
 
       <BackToTop />
+
+      {/* Download Modal */}
+      <DownloadModal isOpen={showDownloadModal} onClose={closeDownloadModal} />
     </div>
   );
 }
