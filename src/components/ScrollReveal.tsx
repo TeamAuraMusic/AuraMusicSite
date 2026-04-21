@@ -22,7 +22,7 @@ export default function ScrollReveal({ children, delay = 0 }: ScrollRevealProps)
           observer.unobserve(el);
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0 },
     );
 
     observer.observe(el);
