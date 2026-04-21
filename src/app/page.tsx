@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Download,
   Music,
@@ -17,7 +19,7 @@ import {
   Video,
   Activity,
   X,
-  } from "lucide-react";
+} from "lucide-react";
 import Image from "next/image";
 import MobileMenu from "@/components/MobileMenu";
 import FaqAccordion from "@/components/FaqAccordion";
