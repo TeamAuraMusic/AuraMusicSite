@@ -21,13 +21,17 @@ import {
   X,
 } from "lucide-react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import MobileMenu from "@/components/MobileMenu";
 import FaqAccordion from "@/components/FaqAccordion";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
-import GitHubStats from "@/components/GitHubStats";
 import { useState } from "react";
+
+const GitHubStats = dynamic(() => import("@/components/GitHubStats"), {
+  ssr: false,
+});
 
 function GithubIcon({ className }: { className?: string }) {
   return (
