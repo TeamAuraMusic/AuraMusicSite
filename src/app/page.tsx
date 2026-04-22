@@ -28,10 +28,7 @@ import DarkModeToggle from "@/components/DarkModeToggle";
 import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useState } from "react";
-
-const GitHubStats = dynamic(() => import("@/components/GitHubStats"), {
-  ssr: false,
-});
+import GitHubStats from "@/components/GitHubStats";
 
 function GithubIcon({ className }: { className?: string }) {
   return (

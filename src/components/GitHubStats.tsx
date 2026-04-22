@@ -1,4 +1,7 @@
+"use client";
+
 import { Star, Download, Tag } from "lucide-react";
+import { useState, useEffect } from "react";
 
 interface Stats {
   stars: number;
@@ -9,12 +12,8 @@ interface Stats {
 async function fetchStats(): Promise<Stats> {
   try {
     const [repoRes, releasesRes] = await Promise.all([
-      fetch("https://api.github.com/repos/chila254/AuraMusic", {
-        next: { revalidate: 3600 },
-      }),
-      fetch("https://api.github.com/repos/chila254/AuraMusic/releases", {
-        next: { revalidate: 3600 },
-      }),
+      fetch("https://api.github.com/repos/TeamAuraMusic/AuraMusic"),
+      fetch("https://api.github.com/repos/TeamAuraMusic/AuraMusic/releases"),
     ]);
 
     const repo = await repoRes.json();
@@ -42,14 +41,43 @@ async function fetchStats(): Promise<Stats> {
   }
 }
 
-export default async function GitHubStats() {
-  const stats = await fetchStats();
+export default function GitHubStats() {
+  const [stats, setStats] = useState<Stats>({
+    stars: 0,
+    downloads: 0,
+    version: "—",
+  });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchStats().then((data) => {
+      setStats(data);
+      setLoading(false);
+    });
+  }, []);
 
   const items = [
     { icon: Star, label: "Stars", value: stats.stars.toLocaleString() },
     { icon: Download, label: "Downloads", value: stats.downloads.toLocaleString() },
     { icon: Tag, label: "Version", value: stats.version },
   ];
+
+  if (loading) {
+    return (
+      <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
+        {[1, 2, 3].map((i) => (
+          <div
+            key={i}
+            className="text-center p-2 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 animate-pulse"
+          >
+            <div className="w-4 h-4 bg-zinc-200 dark:bg-zinc-700 rounded mx-auto mb-1" />
+            <div className="w-12 h-4 bg-zinc-200 dark:bg-zinc-700 rounded mx-auto" />
+            <div className="w-10 h-2 bg-zinc-200 dark:bg-zinc-700 rounded mx-auto mt-1" />
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
