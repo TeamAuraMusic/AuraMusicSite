@@ -21,7 +21,6 @@ import {
   X,
 } from "lucide-react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import MobileMenu from "@/components/MobileMenu";
 import FaqAccordion from "@/components/FaqAccordion";
 import DarkModeToggle from "@/components/DarkModeToggle";

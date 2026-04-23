@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,15 +10,12 @@ import {
   ChevronLeft,
 } from "lucide-react";
 
-const AURAMUSIC_PACKAGE = "com.auramusic.app";
 const AURAMUSIC_SCHEME = "auramusic://";
 const GITHUB_REPO = "https://github.com/TeamAuraMusic/AuraMusic";
 const TELEGRAM_URL = "https://t.me/AuraMusicUpdates";
 const DISCORD_URL = "https://discord.gg/RAMPZy49K";
 
 export default function PlaySongPage({ params }: { params: { videoId: string } }) {
-  const router = useRouter();
-  const [searchParams] = useSearchParams();
   const videoId = params.videoId;
   const [isAppInstalled, setIsAppInstalled] = useState<boolean | null>(null);
   const [isChecking, setIsChecking] = useState(true);
