@@ -6,7 +6,6 @@ import Image from "next/image";
 import {
   Download,
   Play,
-  Music,
   ChevronLeft,
 } from "lucide-react";
 
@@ -39,7 +38,7 @@ export default function PlaySongPage({ params }: { params: Promise<{ videoId: st
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/icon.png"
+              src="/app-icon.png"
               alt="AuraMusic"
               width={36}
               height={36}
@@ -66,7 +65,7 @@ export default function PlaySongPage({ params }: { params: Promise<{ videoId: st
           <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-zinc-200 dark:border-zinc-800 p-8 text-center">
             {/* Animated Icon */}
             <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-orange-500/10 to-pink-500/10 flex items-center justify-center">
-              <Music className="w-10 h-10 text-orange-500" />
+              <Image src="/app-icon.png" alt="AuraMusic" width={48} height={48} className="rounded-xl" />
             </div>
 
             <h1 className="text-2xl font-bold mb-2">Play in AuraMusic</h1>
@@ -77,8 +76,8 @@ export default function PlaySongPage({ params }: { params: Promise<{ videoId: st
 
             {/* Song Info */}
             <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4 mb-6 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-                <Music className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Image src="/app-icon.png" alt="AuraMusic" width={28} height={28} className="rounded-lg" />
               </div>
               <div className="text-left">
                 <p className="text-sm font-semibold">Shared Song</p>
@@ -144,7 +143,7 @@ export default function PlaySongPage({ params }: { params: Promise<{ videoId: st
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Image
-              src="/icon.png"
+              src="/app-icon.png"
               alt="AuraMusic"
               width={28}
               height={28}
