@@ -15,14 +15,20 @@ const GITHUB_REPO = "https://github.com/TeamAuraMusic/AuraMusic";
 const TELEGRAM_URL = "https://t.me/AuraMusicUpdates";
 const DISCORD_URL = "https://discord.gg/RAMPZy49K";
 
-export default function PlaySongPage({ params }: { params: { videoId: string } }) {
-  const videoId = params.videoId;
+export default function PlaySongPage({ params }: { params: Promise<{ videoId: string }> }) {
+  const [videoId, setVideoId] = useState<string | null>(null);
   const [isAppInstalled, setIsAppInstalled] = useState<boolean | null>(null);
   const [isChecking, setIsChecking] = useState(true);
 
   useEffect(() => {
-    checkAppInstalled();
-  }, []);
+    params.then((p) => setVideoId(p.videoId));
+  }, [params]);
+
+  useEffect(() => {
+    if (videoId) {
+      checkAppInstalled();
+    }
+  }, [videoId]);
 
   const checkAppInstalled = async () => {
     // Method 1: Try to open the app via intent/uRL scheme
