@@ -124,7 +124,7 @@ export default function PlayPageClient({ videoId }: { videoId: string }) {
               With AuraMusic you can:
             </p>
             <div className="flex flex-wrap justify-center gap-2">
-              {["Play YouTube Music", "Download for offline", "Live lyrics", "Equalizer"].map((feature) => (
+              {["Stream Music ", "Download for offline", "Live lyrics", "Equalizer"].map((feature) => (
                 <span
                   key={feature}
                   className="px-3 py-1 text-xs rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400"
