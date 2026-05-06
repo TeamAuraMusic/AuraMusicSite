@@ -48,7 +48,7 @@ const DOWNLOAD_URLS = {
   cast:
     "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic-with-Google-Cast.apk",
   tv:
-    "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic TV.apk",
+    "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic Tv.apk",
 };
 
 function TelegramIcon({ className }: { className?: string }) {
