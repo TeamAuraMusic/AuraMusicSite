@@ -47,6 +47,8 @@ const DOWNLOAD_URLS = {
     "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic.apk",
   cast:
     "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic-with-Google-Cast.apk",
+  tv:
+    "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic-TV.apk",
 };
 
 function TelegramIcon({ className }: { className?: string }) {
@@ -206,7 +208,7 @@ function DownloadModal({
   isOpen: boolean;
   onClose: () => void;
 }) {
-  const [variant, setVariant] = useState<"standard" | "cast">("standard");
+  const [variant, setVariant] = useState<"standard" | "cast" | "tv">("standard");
 
   if (!isOpen) return null;
 
@@ -276,6 +278,28 @@ function DownloadModal({
               <p className="text-xs text-zinc-500 dark:text-zinc-400">
                 Includes Google Cast support. Requires Google Mobile Services
                 (GMS).
+              </p>
+            </div>
+          </label>
+          <label
+            className={`flex items-start gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all ${
+              variant === "tv"
+                ? "border-orange-500 bg-orange-50 dark:bg-orange-500/10"
+                : "border-zinc-200 dark:border-zinc-700 hover:border-zinc-300"
+            }`}
+          >
+            <input
+              type="radio"
+              name="variant"
+              value="tv"
+              checked={variant === "tv"}
+              onChange={(e) => setVariant(e.target.value as "tv")}
+              className="mt-1"
+            />
+            <div>
+              <p className="font-semibold">Android TV</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                TV-optimized with 10-foot UI and D-pad navigation.
               </p>
             </div>
           </label>
@@ -355,7 +379,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-3 h-3 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-bold">N</span>
-                                v2.1.0 — Voice Commands & Cast Support
+                                v2.2.0 — Android TV & TV Support
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
