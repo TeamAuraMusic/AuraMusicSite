@@ -379,7 +379,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-3 h-3 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-bold">N</span>
-                                v2.2.0 — Android TV & TV Support
+                                v2.3.0 — Hardware Integration & Enhanced Lyrics
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
