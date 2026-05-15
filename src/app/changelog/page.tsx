@@ -35,6 +35,28 @@ const releases = [
     version: "v2.2.0",
     build: "Build 19",
     date: "",
+    changes: [
+      "Full Android TV / Google TV support with 10-foot UI",
+      "TV Home Screen with Quick Picks, Forgotten Favorites, Keep Listening, Similar Recommendations",
+      "TV Player with full-screen controls, queue sidebar, sleep timer, and lyrics",
+      "D-pad navigation with custom navigator and focus management",
+      "TV Settings: Appearance, Content, Storage, Updater, About",
+      "Radio Queue on TV — single songs now load full radio queues",
+      "Voice command improvements with AEC, NoiseSuppressor, and RMS filtering",
+      "Confidence and audio energy filtering to reduce false wake word triggers",
+      "Added sleep timer and lyrics buttons to queue bar (new player)",
+      "Added shuffle button with 4-dot animation (old player)",
+      "Increased compact square widget to 4x4, modernized all widgets",
+      "Full-cover album art backgrounds for widgets",
+      "Gradient colors to dynamic icon foreground",
+      "Fixed ForegroundServiceDidNotStartInTimeException on Android 14+",
+      "Fixed ANR caused by VOSK native cleanup blocking main thread",
+      "Fixed VOSK detector memory leaks and false wake word triggers",
+      "Fixed TV compilation errors, navigation focus, and white screen issues",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.1.0...v2.2.0",
+  },
   {
     version: "v2.1.0",
     build: "Build 18",
@@ -54,7 +76,7 @@ const releases = [
       "Updated tinypinyin version to 2.0.1",
     ],
     compareUrl:
-      "https://github.com/TeamAuraMusic/AuraMusic/compare/v1.0.15...2.0.0",
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/2.0.0...v2.1.0",
   },
   {
     version: "v1.0.14",
