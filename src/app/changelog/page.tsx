@@ -4,9 +4,28 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.4.0",
+    build: "Build 21",
+    date: "Latest",
+    changes: [
+      "True 1080p+ video playback — merged high-resolution video streams with premium audio",
+      "Server-powered Karaoke integration with dedicated ML server (karaoke.auramusic.site)",
+      "Full PO token + BotGuard implementation for reliable playback and automatic recovery",
+      "Enhanced Lyrics overhaul with brand new Monochrome animated style and word-level rendering",
+      "Instrumental indicators and connected lines now work correctly in enhanced lyrics mode",
+      "Dramatically sharper thumbnails and artwork — upgraded resizer for all Google CDN hosts",
+      "Modernized About screen with beautiful 2-column contributor grid and real GitHub avatars",
+      "Added Liberapay support for donations",
+      "Translation contributors now proudly listed with profile pictures",
+      "New French, Spanish, and Portuguese translations via Weblate",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.3.0...v2.4.0",
+  },
+  {
     version: "v2.3.0",
     build: "Build 20",
-    date: "Latest",
+    date: "",
     changes: [
       "Hardware integration with Bluetooth device support and audio device management",
       "Wake-up and snooze alarm functionality with hardware ecosystem integration",
