@@ -40,7 +40,7 @@ function GithubIcon({ className }: { className?: string }) {
 const GITHUB_REPO = "https://github.com/TeamAuraMusic/AuraMusic";
 const RELEASES_URL = "https://github.com/TeamAuraMusic/AuraMusic/releases";
 const TELEGRAM_URL = "https://t.me/AuraMusicUpdates";
-const DISCORD_URL = "https://discord.gg/RAMPZy49K";
+const DISCORD_URL = "https://discord.gg/935CRM8u3";
 
 const DOWNLOAD_URLS = {
   standard:
