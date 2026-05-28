@@ -4,9 +4,26 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.5.0",
+    build: "Build 22",
+    date: "May 28, 2026",
+    changes: [
+      "AuraCanvas - Dynamic video backdrops for artist headers and album covers",
+      "Improved AuraCanvasOverlay with TextureView, error handling, and fade-in animation",
+      "BetterLyrics TTML fetching and parsing fixes",
+      "SimpMusic HTML entity decoding fix",
+      "Monochrome layer support for adaptive icons on Android 13+",
+      "Changed client engine to cio",
+      "Fixed start page playback and speed dial shuffle loading",
+      "Updated Discord invite link to discord.gg/935CRM8u3",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.4.0...v2.5.0",
+  },
+  {
     version: "v2.4.0",
     build: "Build 21",
-    date: "Latest",
+    date: "",
     changes: [
       "True 1080p+ video playback — merged high-resolution video streams with premium audio",
       "Server-powered Karaoke integration with dedicated ML server (karaoke.auramusic.site)",

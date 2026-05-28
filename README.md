@@ -1,6 +1,6 @@
 # AuraMusic Landing Page
 
-The official landing website for [AuraMusic](https://github.com/chila254/AuraMusic) — a modern Android music player with YouTube Music integration, powerful audio features, and a beautiful Material 3 interface.
+The official landing website for [AuraMusic](https://github.com/TeamAuraMusic/AuraMusic) — a modern Android music player with YouTube Music integration, powerful audio features, and a beautiful Material 3 interface.
 
 ## Tech Stack
 
@@ -24,4 +24,4 @@ This project is configured for **Vercel** deployment. Connect the GitHub repo to
 
 ## License
 
-GPL-3.0 — see [LICENSE](https://github.com/chila254/AuraMusic/blob/main/LICENSE)
+GPL-3.0 — see [LICENSE](https://github.com/TeamAuraMusic/AuraMusic/blob/main/LICENSE)

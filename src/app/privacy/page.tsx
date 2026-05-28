@@ -41,7 +41,7 @@ const sections = [
   {
     title: "Contact",
     content:
-      "If you have any questions or concerns about privacy, please open an issue on our GitHub repository at github.com/chila254/AuraMusic.",
+      "If you have any questions or concerns about privacy, please open an issue on our GitHub repository at github.com/TeamAuraMusic/AuraMusic.",
   },
 ];
 
