@@ -4,6 +4,24 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.6.0",
+    build: "Build 23",
+    date: "June 6, 2026",
+    changes: [
+      "Lyrics font selection improvements",
+      "AuraCanvas video backdrop enhancements",
+      "YouTube API 2026 compatibility fixes",
+      "Ko-fi funding support",
+      "Fixed YouTube Music song parsing after InnerTube changes",
+      "Improved AuraCanvas display logic and Thumbnail component",
+      "Moved player canvases to full-screen background",
+      "Removed CastButton from AuraCanvasOverlay for FOSS compatibility",
+      "Fixed subscribed artists showing local songs instead of subscriber count",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.5.0...v2.6.0",
+  },
+  {
     version: "v2.5.0",
     build: "Build 22",
     date: "May 28, 2026",
