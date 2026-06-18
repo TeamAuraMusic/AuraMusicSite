@@ -686,6 +686,14 @@ export default function Home() {
                   Privacy
                 </a>
                 <a
+                  href="https://ko-fi.com/auramusic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                >
+                  Ko-fi
+                </a>
+                <a
                   href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=franklinfinyange%40gmail.com&currency_code=USD&item_name=Support+Aura+Music"
                   target="_blank"
                   rel="noopener noreferrer"
