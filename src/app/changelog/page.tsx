@@ -4,6 +4,22 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.7.0",
+    build: "Build 24",
+    date: "June 18, 2026",
+    changes: [
+      "Library Audiobooks with resume bookmarks",
+      "Late Night Audio Mode and Surround Passthrough",
+      "SponsorBlock integration for auto-skipping sponsor segments",
+      "Tablet split-view and lock-screen playback improvements",
+      "YouTube login session refresh and InnerTube fixes",
+      "Many new translations: Chinese, German, Italian, Tamil, Arabic, Filipino",
+      "Fixed Rush and BetterLyrics providers",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.6.0...v2.7.0",
+  },
+  {
     version: "v2.6.0",
     build: "Build 23",
     date: "June 6, 2026",
