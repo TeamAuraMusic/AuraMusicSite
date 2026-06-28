@@ -4,6 +4,22 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.8.0",
+    build: "Build 25",
+    date: "June 23, 2026",
+    changes: [
+      "Android TV redesign with Spotify-style focused detail panel",
+      "Continue Listening row on Google TV home screen",
+      "Android TV navigation and focus improvements",
+      "Major video playback stability fixes",
+      "Lyrics fallbacks with LyricsPlus and Genius support",
+      "Android 14 compatibility fixes",
+      "Improved CI/CD pipeline and APK artifact naming",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.7.0...v2.8.0",
+  },
+  {
     version: "v2.7.0",
     build: "Build 24",
     date: "June 18, 2026",

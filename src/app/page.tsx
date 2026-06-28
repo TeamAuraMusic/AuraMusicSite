@@ -42,6 +42,13 @@ const RELEASES_URL = "https://github.com/TeamAuraMusic/AuraMusic/releases";
 const TELEGRAM_URL = "https://t.me/AuraMusicUpdates";
 const DISCORD_URL = "https://discord.gg/935CRM8u3";
 
+const DONATION_URLS = {
+  paypal:
+    "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=franklinfinyange%40gmail.com&currency_code=USD&item_name=Support+Aura+Music",
+  kofi: "https://ko-fi.com/chila254",
+  liberapay: "https://liberapay.com/chila254",
+};
+
 const DOWNLOAD_URLS = {
   standard:
     "https://github.com/TeamAuraMusic/AuraMusic/releases/latest/download/AuraMusic.apk",
@@ -316,11 +323,71 @@ function DownloadModal({
   );
 }
 
+function DonateModal({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      <div
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      <div className="relative bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 p-6 max-w-md w-full mx-4">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-1 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+        >
+          <X className="w-5 h-5" />
+        </button>
+        <h3 className="text-xl font-bold mb-4">Support AuraMusic</h3>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-6">
+          Choose a platform to support the project:
+        </p>
+        <div className="space-y-3">
+          <a
+            href={DONATION_URLS.kofi}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-orange-500 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 font-medium transition-colors"
+          >
+            Ko-fi
+          </a>
+          <a
+            href={DONATION_URLS.liberapay}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-orange-500 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 font-medium transition-colors"
+          >
+            Liberapay
+          </a>
+          <a
+            href={DONATION_URLS.paypal}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center px-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-orange-500 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 font-medium transition-colors"
+          >
+            PayPal
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const [showDonateModal, setShowDonateModal] = useState(false);
 
   const openDownloadModal = () => setShowDownloadModal(true);
   const closeDownloadModal = () => setShowDownloadModal(false);
+  const openDonateModal = () => setShowDonateModal(true);
+  const closeDonateModal = () => setShowDonateModal(false);
 
   return (
     <div className="flex flex-col min-h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50">
@@ -353,15 +420,25 @@ export default function Home() {
               FAQ
             </a>
           </nav>
-          <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
             <DarkModeToggle />
-<button
-                  onClick={openDownloadModal}
-                  className="hidden sm:inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
-                >
-                  <Download className="w-4 h-4" />
-                  Download
-                </button>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openDonateModal();
+              }}
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all"
+            >
+              Donate
+            </a>
+            <button
+              onClick={openDownloadModal}
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+            >
+              <Download className="w-4 h-4" />
+              Download
+            </button>
             <MobileMenu onDownloadClick={openDownloadModal} />
           </div>
         </div>
@@ -379,7 +456,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-3 h-3 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-bold">N</span>
-                v2.7.0 — Audiobooks, SponsorBlock & Late Night Mode
+                v2.8.0 — Android TV Redesign & Video Stability
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
@@ -686,17 +763,11 @@ export default function Home() {
                   Privacy
                 </a>
                 <a
-                  href="https://ko-fi.com/auramusic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-                >
-                  Ko-fi
-                </a>
-                <a
-                  href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=franklinfinyange%40gmail.com&currency_code=USD&item_name=Support+Aura+Music"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openDonateModal();
+                  }}
                   className="hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
                 >
                   Donate
@@ -724,8 +795,8 @@ export default function Home() {
 
       <BackToTop />
 
-      {/* Download Modal */}
       <DownloadModal isOpen={showDownloadModal} onClose={closeDownloadModal} />
+      <DonateModal isOpen={showDonateModal} onClose={closeDonateModal} />
     </div>
   );
 }
