@@ -40,7 +40,7 @@ function GithubIcon({ className }: { className?: string }) {
 const GITHUB_REPO = "https://github.com/TeamAuraMusic/AuraMusic";
 const RELEASES_URL = "https://github.com/TeamAuraMusic/AuraMusic/releases";
 const TELEGRAM_URL = "https://t.me/AuraMusicUpdates";
-const DISCORD_URL = "https://discord.gg/935CRM8u3";
+const DISCORD_URL = "https://discord.gg/H6Nvy6Fs7Z";
 
 const DONATION_URLS = {
   paypal:
@@ -456,7 +456,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-3 h-3 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-bold">N</span>
-                v2.8.0 — Android TV Redesign & Video Stability
+                v2.9.0 — Discord Integration & Playback Stability
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>

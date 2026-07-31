@@ -12,7 +12,7 @@ import {
 const AURAMUSIC_SCHEME = "auramusic://";
 const GITHUB_REPO = "https://github.com/TeamAuraMusic/AuraMusic";
 const TELEGRAM_URL = "https://t.me/AuraMusicUpdates";
-const DISCORD_URL = "https://discord.gg/935CRM8u3";
+const DISCORD_URL = "https://discord.gg/H6Nvy6Fs7Z";
 
 export default function PlayPageClient({ videoId }: { videoId: string }) {
   const handleOpenApp = () => {

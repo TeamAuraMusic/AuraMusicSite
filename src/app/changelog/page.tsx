@@ -4,6 +4,22 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v2.9.0",
+    build: "Build 26",
+    date: "July 13, 2026",
+    changes: [
+      "Discord integration rewritten with OAuth2 PKCE login and rich presence (still under active development)",
+      "Major video playback stability and Android TV player improvements",
+      "SponsorBlock segment loading and duration handling fixes",
+      "Grouped search results by item type",
+      "YouTube Music history sync and Last.fm scrobbling fixes",
+      "Fixed Vosk voice recognition crash on Android 16",
+      "Hindi, Turkish, and Simplified Chinese translation updates",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.8.0...v2.9.0",
+  },
+  {
     version: "v2.8.0",
     build: "Build 25",
     date: "June 23, 2026",
