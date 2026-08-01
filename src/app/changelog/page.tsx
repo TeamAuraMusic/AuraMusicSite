@@ -4,6 +4,23 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v3.0.0",
+    build: "Build 27",
+    date: "July 31, 2026",
+    changes: [
+      "AutoMix support for streamed music on mobile and Android TV",
+      "Added Musixmatch and Paxsenix synchronized lyrics providers",
+      "Expanded Android TV player, lyrics, video, navigation, and library experience",
+      "Complete Last.fm settings and improved recommendations on Android TV",
+      "Improved radio recommendations and YouTube Music login persistence",
+      "Added signed APKs tailored for ARM64, ARMv7, x86, and x86_64 devices",
+      "Fixed Android Auto detection and Discord OAuth login failures",
+      "Added and refined Korean translations",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v2.9.0...v3.0.0",
+  },
+  {
     version: "v2.9.0",
     build: "Build 26",
     date: "July 13, 2026",

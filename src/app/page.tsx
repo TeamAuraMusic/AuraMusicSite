@@ -112,7 +112,7 @@ const features = [
     icon: BookOpen,
     title: "Live Lyrics",
     description:
-      "Follow along with time-synced lyrics from Kugou, LRCLib, RushLyrics, and BetterLyrics with word-by-word highlighting.",
+      "Follow along with time-synced lyrics from Musixmatch, Paxsenix, LRCLib, BetterLyrics, and more, with word-by-word highlighting.",
   },
   {
     icon: Download,
@@ -124,7 +124,7 @@ const features = [
     icon: SlidersHorizontal,
     title: "Equalizer & Audio Controls",
     description:
-      "Fine-tune your sound with a built-in equalizer, custom presets, tempo/pitch adjustment, and skip silence.",
+      "Fine-tune your sound with AutoMix, a built-in equalizer, custom presets, tempo/pitch adjustment, and skip silence.",
   },
   {
     icon: Mic,
@@ -456,7 +456,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-medium rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-md">
                 <span className="w-3 h-3 rounded-full bg-white/20 flex items-center justify-center text-[8px] font-bold">N</span>
-                v2.9.0 — Discord Integration & Playback Stability
+                v3.0.0 — AutoMix, New Lyrics Providers & Expanded TV Experience
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
