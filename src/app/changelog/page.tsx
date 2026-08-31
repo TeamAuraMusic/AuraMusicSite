@@ -4,6 +4,25 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 
 const releases = [
   {
+    version: "v3.1.0",
+    build: "Build 28",
+    date: "August 31, 2026",
+    changes: [
+      "Focused stability & polish update — hardened playback & streaming for 2026 YouTube enforcement (PO token attestation, URL probing, rate-limit handling, guest-client fallback)",
+      "Fixed foreground notification crashes, media notifications not showing, and next-song / wrong-video advance bugs",
+      "Resolved stream URL chunking and IO_BAD_HTTP_STATUS handling for reliable queue progression",
+      "Extensive Android TV polish: unified scaling, video playback transitions, black-screen & surface restoration fixes, SponsorBlock/AutoMix guards",
+      "Refined in-app screensaver (video with captions, prevents Dream overlay, audio-only) and enhanced lyrics defaults",
+      "Fixed Discord Rich Presence — migrated to OkHttp (TLS fix), persisted OAuth scope, restored artist/song thumbnails",
+      "Fixed library artwork: liked albums/playlists showing empty/black thumbnails — now fills missing thumbnailUrl and shows MusicNote fallback",
+      "Made split ABI APKs actually smaller (~30% reduction) — per-ABI variants now contain only one ABI, universal keeps all 4",
+      "Homepage layout toggle (grid/list), mini-player tweaks, expanded liquid-glass effects and full-bleed widget art",
+      "Updated translations via Weblate: German, Chinese (Simplified), Russian, French, Spanish and Turkish",
+    ],
+    compareUrl:
+      "https://github.com/TeamAuraMusic/AuraMusic/compare/v3.0.0...v3.1.0",
+  },
+  {
     version: "v3.0.0",
     build: "Build 27",
     date: "July 31, 2026",
